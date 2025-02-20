@@ -9862,6 +9862,36 @@ export interface Browser {
      */
     logger?: Logger;
 
+    navigator?: {
+      /**
+       * navigator.platform.
+       */
+      platform: string;
+
+      userAgentData?: {
+        brands?: Array<{
+          brand: string;
+
+          version: string;
+        }>;
+
+        architecture?: string;
+
+        bitness?: string;
+
+        model?: string;
+
+        wow64?: boolean;
+
+        platformVersion?: string;
+
+        /**
+         * Emulates consistent navigator.platform and navigator.userAgentData.
+         */
+        platform?: string;
+      };
+    };
+
     /**
      * Whether to emulate network being offline. Defaults to `false`. Learn more about
      * [network emulation](https://playwright.dev/docs/emulation#offline).
@@ -14893,6 +14923,36 @@ export interface BrowserType<Unused = {}> {
      */
     logger?: Logger;
 
+    navigator?: {
+      /**
+       * navigator.platform.
+       */
+      platform: string;
+
+      userAgentData?: {
+        brands?: Array<{
+          brand: string;
+
+          version: string;
+        }>;
+
+        architecture?: string;
+
+        bitness?: string;
+
+        model?: string;
+
+        wow64?: boolean;
+
+        platformVersion?: string;
+
+        /**
+         * Emulates consistent navigator.platform and navigator.userAgentData.
+         */
+        platform?: string;
+      };
+    };
+
     /**
      * Whether to emulate network being offline. Defaults to `false`. Learn more about
      * [network emulation](https://playwright.dev/docs/emulation#offline).
@@ -16627,6 +16687,36 @@ export interface AndroidDevice {
      * Logger sink for Playwright logging.
      */
     logger?: Logger;
+
+    navigator?: {
+      /**
+       * navigator.platform.
+       */
+      platform: string;
+
+      userAgentData?: {
+        brands?: Array<{
+          brand: string;
+
+          version: string;
+        }>;
+
+        architecture?: string;
+
+        bitness?: string;
+
+        model?: string;
+
+        wow64?: boolean;
+
+        platformVersion?: string;
+
+        /**
+         * Emulates consistent navigator.platform and navigator.userAgentData.
+         */
+        platform?: string;
+      };
+    };
 
     /**
      * Whether to emulate network being offline. Defaults to `false`. Learn more about
@@ -21887,6 +21977,36 @@ export interface BrowserContextOptions {
    * Logger sink for Playwright logging.
    */
   logger?: Logger;
+
+  navigator?: {
+    /**
+     * navigator.platform.
+     */
+    platform: string;
+
+    userAgentData?: {
+      brands?: Array<{
+        brand: string;
+
+        version: string;
+      }>;
+
+      architecture?: string;
+
+      bitness?: string;
+
+      model?: string;
+
+      wow64?: boolean;
+
+      platformVersion?: string;
+
+      /**
+       * Emulates consistent navigator.platform and navigator.userAgentData.
+       */
+      platform?: string;
+    };
+  };
 
   /**
    * Whether to emulate network being offline. Defaults to `false`. Learn more about

@@ -356,6 +356,22 @@ It makes the execution of the tests non-deterministic.
 Emulates consistent window screen size available inside web page via `window.screen`. Is only used when the
 [`option: viewport`] is set.
 
+## context-option-navigator
+- `navigator` <[Object]>
+  - `platform` <[string]> navigator.platform.
+  - `userAgentData` ?<[Object]>
+    - `brands` ?<[Array]<[Object]>>
+      - `brand` <[string]>
+      - `version` <[string]>
+    - `architecture` ?<[string]>
+    - `bitness` ?<[string]>
+    - `model` ?<[string]>
+    - `wow64` ?<[boolean]>
+    - `platformVersion` ?<[string]>
+    - `platform` ?<[string]>
+
+Emulates consistent navigator.platform and navigator.userAgentData.
+
 ## fetch-param-url
 - `url` <[string]>
 
@@ -987,6 +1003,7 @@ between the same pixel in compared images, between zero (strict) and one (lax), 
 - %%-context-option-recordvideo-size-%%
 - %%-context-option-strict-%%
 - %%-context-option-service-worker-policy-%%
+- %%-context-option-navigator-%%
 
 ## browser-option-args
 - `args` <[Array]<[string]>>

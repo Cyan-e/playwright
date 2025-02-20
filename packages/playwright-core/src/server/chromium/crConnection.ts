@@ -140,6 +140,7 @@ export class CRSession extends EventEmitter {
     method: T,
     params?: Protocol.CommandParameters[T]
   ): Promise<Protocol.CommandReturnValues[T]> {
+    console.log(`<DEBUG=pw:CDP ${method} ${JSON.stringify(params)}>`);
     if (this._crashed || this._closed || this._connection._closed || this._connection._browserDisconnectedLogs)
       throw new ProtocolError(this._crashed ? 'crashed' : 'closed', undefined, this._connection._browserDisconnectedLogs);
     const id = this._connection._rawSend(this._sessionId, method, params);

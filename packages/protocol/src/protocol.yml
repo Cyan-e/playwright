@@ -482,6 +482,26 @@ ContextOptions:
           - unauthorized
     deviceScaleFactor: number?
     isMobile: boolean?
+    navigator: 
+      type: object?
+      properties:
+        platform: string
+        userAgentData: 
+          type: object?
+          properties:
+            brands:
+              type: array?
+              items:
+                type: object
+                properties:
+                  brand: string
+                  version: string
+            architecture: string?
+            bitness: string?
+            model: string?
+            wow64: boolean?
+            platformVersion: string?
+            platform: string?
     hasTouch: boolean?
     colorScheme:
       type: enum?
